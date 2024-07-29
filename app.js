@@ -1,17 +1,6 @@
-const express = require('express');
-const app = express();
-const port = 3000;
+const app = require('./src/app');
+const PORT = 3000;
 
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-
-app.listen(port, (err) => {
-    if (err) {
-        return console.log('Something bad happened', err);
-    }
-    console.log(`Server is listening on ${port}`);
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
 });
-
-
-
-module.exports = app;
